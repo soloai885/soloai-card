@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="顏建明 執行長 CEO｜壹智科技有限公司 SoloAI｜AI 數位轉型顧問">
+<title>顏建明｜SoloAI 壹智科技</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #0B2A6B;
+    --navy-mid: #1A4FBF;
+    --navy-light: #4A90D9;
+    --accent: #00C9A7;
+    --text-primary: #0B2A6B;
+    --text-muted: #6B85B8;
+    --bg: #F0F4FF;
+    --white: #ffffff;
+    --border: #DDE6F7;
+  }
+
+  html, body {
+    min-height: 100vh;
+    background: var(--bg);
+    font-family: 'DM Sans', 'Noto Sans TC', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 16px;
+  }
+
+  /* 背景幾何裝飾 */
+  body::before {
+    content: '';
+    position: fixed;
+    top: -120px; right: -120px;
+    width: 400px; height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(26,79,191,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  body::after {
+    content: '';
+    position: fixed;
+    bottom: -80px; left: -80px;
+    width: 300px; height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0,201,167,0.10) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 420px;
+    background: var(--white);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(11,42,107,0.15), 0 4px 16px rgba(11,42,107,0.08);
+    animation: slideUp 0.6s cubic-bezier(0.16,1,0.3,1) both;
+  }
+
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(32px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Header */
+  .card-header {
+    background: var(--navy);
+    padding: 32px 28px 28px;
+    position: relative;
+    overflow: hidden;
+  }
+  .card-header::before {
+    content: '';
+    position: absolute;
+    top: -40px; right: -40px;
+    width: 180px; height: 180px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.04);
+  }
+  .card-header::after {
+    content: '';
+    position: absolute;
+    bottom: -60px; right: 40px;
+    width: 120px; height: 120px;
+    border-radius: 50%;
+    background: rgba(0,201,167,0.08);
+  }
+
+  .header-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+
+  .avatar {
+    width: 60px; height: 60px;
+    border-radius: 16px;
+    background: var(--navy-mid);
+    border: 2px solid rgba(255,255,255,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 900;
+    color: var(--white);
+    font-family: 'Noto Sans TC', sans-serif;
+    flex-shrink: 0;
+    letter-spacing: 0;
+  }
+
+  .header-name { flex: 1; }
+
+  .name-zh {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--white);
+    letter-spacing: 6px;
+    line-height: 1.1;
+  }
+
+  .title-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+  }
+
+  .title-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(0,201,167,0.18);
+    border: 1px solid rgba(0,201,167,0.35);
+    color: #00e8c0;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+  }
+
+  .brand-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .brand-logo {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: -0.5px;
+  }
+
+  .brand-logo span { color: var(--navy-light); }
+
+  .brand-sep {
+    width: 1px; height: 20px;
+    background: rgba(255,255,255,0.2);
+  }
+
+  .brand-zh {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 12px;
+    color: rgba(255,255,255,0.55);
+    letter-spacing: 2px;
+  }
+
+  /* Info Section */
+  .info-section {
+    padding: 24px 28px 8px;
+  }
+
+  .info-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 11px 0;
+    border-bottom: 1px solid var(--border);
+    animation: fadeIn 0.4s ease both;
+  }
+  .info-row:last-child { border-bottom: none; }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateX(-8px); }
+    to   { opacity: 1; transform: translateX(0); }
+  }
+  .info-row:nth-child(1) { animation-delay: 0.1s; }
+  .info-row:nth-child(2) { animation-delay: 0.15s; }
+  .info-row:nth-child(3) { animation-delay: 0.2s; }
+  .info-row:nth-child(4) { animation-delay: 0.25s; }
+  .info-row:nth-child(5) { animation-delay: 0.3s; }
+  .info-row:nth-child(6) { animation-delay: 0.35s; }
+
+  .info-icon {
+    width: 36px; height: 36px;
+    border-radius: 10px;
+    background: #EEF3FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 17px;
+  }
+
+  .info-content { flex: 1; }
+
+  .info-label {
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 1px;
+  }
+
+  .info-value {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-primary);
+    font-family: 'Noto Sans TC', sans-serif;
+  }
+
+  .info-value a {
+    color: var(--navy-mid);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .info-value a:hover { color: var(--accent); }
+
+  /* QR Section */
+  .qr-section {
+    margin: 8px 28px 0;
+    background: var(--bg);
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .qr-img {
+    width: 110px; height: 110px;
+    border-radius: 10px;
+    border: 3px solid var(--navy);
+    flex-shrink: 0;
+    display: block;
+  }
+
+  .qr-text { flex: 1; }
+
+  .qr-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 6px;
+    letter-spacing: 0.5px;
+  }
+
+  .qr-desc {
+    font-size: 11px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    font-family: 'Noto Sans TC', sans-serif;
+  }
+
+  /* Action buttons */
+  .btn-group {
+    padding: 20px 28px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn-primary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 14px;
+    background: var(--navy);
+    color: var(--white);
+    border: none;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'DM Sans', sans-serif;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    text-decoration: none;
+  }
+  .btn-primary:hover { background: var(--navy-mid); }
+  .btn-primary:active { transform: scale(0.98); }
+
+  .btn-secondary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 13px;
+    background: transparent;
+    color: var(--navy);
+    border: 1.5px solid var(--border);
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'DM Sans', sans-serif;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+    text-decoration: none;
+  }
+  .btn-secondary:hover {
+    border-color: var(--navy-mid);
+    background: #EEF3FF;
+  }
+
+  /* Footer */
+  .card-footer {
+    background: var(--navy);
+    padding: 14px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer-slogan {
+    font-size: 10px;
+    color: rgba(255,255,255,0.45);
+    letter-spacing: 2px;
+    font-family: 'Noto Sans TC', sans-serif;
+  }
+
+  .footer-url {
+    font-size: 11px;
+    color: var(--navy-light);
+    letter-spacing: 0.5px;
+  }
+</style>
+</head>
+<body>
+
+<div class="card">
+
+  <div class="card-header">
+    <div class="header-top">
+      <div class="avatar">顏</div>
+      <div class="header-name">
+        <div class="name-zh">顏　建　明</div>
+        <div class="title-row">
+          <span class="title-badge">✦ 執行長 CEO</span>
+        </div>
+      </div>
+    </div>
+    <div class="brand-row">
+      <div class="brand-logo">Solo<span>AI</span></div>
+      <div class="brand-sep"></div>
+      <div class="brand-zh">壹智科技有限公司</div>
+    </div>
+  </div>
+
+  <div class="info-section">
+    <div class="info-row">
+      <div class="info-icon">📱</div>
+      <div class="info-content">
+        <span class="info-label">手機</span>
+        <div class="info-value"><a href="tel:0986228206">0986-228-206</a></div>
+      </div>
+    </div>
+    <div class="info-row">
+      <div class="info-icon">📞</div>
+      <div class="info-content">
+        <span class="info-label">市話</span>
+        <div class="info-value"><a href="tel:0755553616">07-5553616</a></div>
+      </div>
+    </div>
+    <div class="info-row">
+      <div class="info-icon">✉️</div>
+      <div class="info-content">
+        <span class="info-label">Email</span>
+        <div class="info-value"><a href="mailto:ming@soloai.com.tw">ming@soloai.com.tw</a></div>
+      </div>
+    </div>
+    <div class="info-row">
+      <div class="info-icon">🌐</div>
+      <div class="info-content">
+        <span class="info-label">官網</span>
+        <div class="info-value"><a href="https://soloai.com.tw" target="_blank">soloai.com.tw</a></div>
+      </div>
+    </div>
+    <div class="info-row">
+      <div class="info-icon">💬</div>
+      <div class="info-content">
+        <span class="info-label">LINE</span>
+        <div class="info-value">@368utzqf</div>
+      </div>
+    </div>
+    <div class="info-row">
+      <div class="info-icon">📍</div>
+      <div class="info-content">
+        <span class="info-label">地址 ｜ 統編 62052729</span>
+        <div class="info-value">高雄市苓雅區中華四路2號12樓</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="qr-section">
+    <img class="qr-img" src="data:image/png;base64,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n3nmjbqe343sQgEAxEQoAICYCAUAEBOhAABiIhQAQEyEAgCIiVAAADERCgAgJkIBAMTa2snPulrCu3S1hN+oa6+ua76u64ne2G7cNQvv66a3rn4180sMN2a+n9+3rjY29duFAgCIiVAAADERCgAgJkIBAMREKACAmAgFABAToQAAYiIUAEBMhAIAiA1tJ3+fut7Vmc25N2a2G9e133a1dc/sTd5o5pqcua5mduLfHHvzfp65cuq875sHdqEAAGIiFABATIQCAIiJUAAAMREKACAmQgEAxEQoAICYCAUAEBOhAABi2sn/kpuO2rpm8xsbm2Q/rel7ZnP9p3VMz5yFm3G77tXM98b7uvhnfktjJrtQAAAxEQoAICZCAQDERCgAgJgIBQAQE6EAAGIiFABATIQCAIiJUAAAsa/neYpO3dUke2PjNZ/N7E2e2RI+s0V65lWdbWyuP3vfuqrTNftdK2fmuDfq2tjfNwt2oQAAYiIUAEBMhAIAiIlQAAAxEQoAICZCAQDERCgAgJgIBQAQE6EAAGLfXQNvbN092/iLZnZq1407s637fFV1rbt196qrE39mq/LMvvWzmc/RzDs5s32+7m6875sWN+xCAQDERCgAgJgIBQAQE6EAAGIiFABATIQCAIiJUAAAMREKACAmQgEAxL6e5+m+BgCAZexCAQDERCgAgJgIBQAQE6EAAGIiFABATIQCAIiJUAAAMREKACAmQgEAxEQoAICYCAUAEBOhAABiIhQAQEyEAgCIiVAAADERCgAgJkIBAMREKACAmAgFABAToQAAYiIUAEBMhAIAiIlQAAAxEQoAICZCAQDERCgAgJgIBQAQE6EAAGIiFABA7L+JpCoxLAXHoAAAAABJRU5ErkJggg==" alt="vCard QR Code">
+    <div class="qr-text">
+      <div class="qr-title">📲 掃描儲存聯絡人</div>
+      <div class="qr-desc">掃描後直接存入手機通訊錄，包含所有聯絡資訊、統一編號與 LINE。</div>
+    </div>
+  </div>
+
+  <div class="btn-group">
+    <button class="btn-primary" onclick="downloadVCard()">⬇ 下載電子名片 (.vcf)</button>
+    <a class="btn-secondary" href="https://soloai.com.tw" target="_blank">🌐 前往官網</a>
+  </div>
+
+  <div class="card-footer">
+    <span class="footer-slogan">HI × AI × 行銷 × 數據 × 驅動企業智慧成長</span>
+    <span class="footer-url">soloai.com.tw</span>
+  </div>
+
+</div>
+
+<script>
+const vcard = "BEGIN:VCARD\r\nVERSION:3.0\r\nFN:顏建明\r\nN:顏;建明;;;\r\nORG:壹智科技有限公司\r\nTITLE:執行長 CEO\r\nTEL;TYPE=CELL:0986-228-206\r\nTEL;TYPE=WORK:07-5553616\r\nEMAIL:ming@soloai.com.tw\r\nURL:https://soloai.com.tw\r\nADR;TYPE=WORK:;;高雄市苓雅區中華四路2號12樓;;;;台灣\r\nNOTE:統一編號：62052729 | LINE：@368utzqf | 品牌：SoloAI\r\nEND:VCARD";
+
+function downloadVCard() {
+  const blob = new Blob([vcard], { type: 'text/vcard;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = '顏建明_壹智科技.vcf';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+</script>
+</body>
+</html>
